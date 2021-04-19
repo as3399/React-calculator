@@ -26,8 +26,9 @@ function App() {
   const Result = () => {
     const mystate = Mystate;
     const length = Mystate.charAt(Mystate.length - 1)
+    console.log(length);
     if (mystate != "") {
-      if (length != "+" || length != "-" || length != "/" || length != "*") {
+      if (length != "+" && length != "-" && length != "/" && length != "*") {
         let ans = eval(Mystate)
         setMystate(ans.toString());
       }
