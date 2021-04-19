@@ -61,7 +61,7 @@ function App() {
       <div className="row text-center">
         <input className=" keys1 col-3" type="button" onClick={InputDigits} name="3" value="3" />
         <input className=" keys1 col-3" type="button" onClick={InputDigits} name="2" value="2" />
-        <input className=" keys1 col-3" type="button" onClick={InputDigits} mame="1" value="1" />
+        <input className=" keys1 col-3" type="button" onClick={InputDigits} name="1" value="1" />
         <input className="col-3 keys2" type="button" onClick={InputDigits} name="/" value="÷" />
       </div>
     </div>
