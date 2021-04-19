@@ -1,0 +1,27 @@
+.container{
+    width: 30%;
+    float: left;
+    margin: 80px;;
+    left: 40px;
+    font-size: 45px;
+}
+.row{
+    align-items: center;
+}
+.keys1{
+    background-color: white;
+    border: 1px solid rgb(189, 38, 38);
+    color: #5d5656; 
+    outline:none;
+}
+.keys2{
+    background-color: #d63e5a;
+    color: white;
+    border: 1px solid rgb(189, 38, 38);
+    outline:none;
+}
+.row1{
+    background-color: #564040;
+    color: white;
+    height: 100px;
+}
