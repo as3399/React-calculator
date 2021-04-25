@@ -1,5 +1,6 @@
 import { React, useState } from "react"
 import "./App.css"
+import $ from "jquery"
 
 function App() {
   const [Mystate, setMystate] = useState("");
@@ -9,7 +10,6 @@ function App() {
       const length = Mystate.charAt(Mystate.length - 1)
       const mystate = Mystate;
       console.log(length, "char");
-
       if ((length == "+" || length == "-" || length == "/" || length == "*") && (e.target.name == "+" || e.target.name == "-" || e.target.name == "/" || e.target.name == "*")) {
         setMystate(Mystate)
       }
@@ -33,9 +33,70 @@ function App() {
         setMystate(ans.toString());
       }
       console.log(Mystate, "state")
-    }
-
+    }w
   }
+  $(document).keypress(function (key) {
+    const length = Mystate.charAt(Mystate.length - 1)
+    let numstring = Mystate;
+    console.log(numstring.toString(), "string")
+    
+    if (key.keyCode == "48") {
+        setMystate(Mystate+ 0);
+    }
+    if (key.keyCode == "49") {
+      setMystate(Mystate+ 1);
+    }
+    if (key.keyCode == "50") {
+      setMystate(Mystate+ 2);
+    }
+    if (key.keyCode == "51") {
+      setMystate(Mystate+ 3);
+    }
+    if (key.keyCode == "52") {
+      setMystate(Mystate+ 4);
+    }
+    if (key.keyCode == "53") {
+      setMystate(Mystate+ 5);
+    }
+    if (key.keyCode == "54") {
+      setMystate(Mystate+ 6);
+    }
+    if (key.keyCode == "55") {
+      setMystate(Mystate+ 7);
+    }
+    if (key.keyCode == "56") {
+      setMystate(Mystate+ 8);
+    }
+    if (key.keyCode == "57") {
+      setMystate(Mystate+ 9);
+    }
+    if (key.keyCode == "43") {
+      if ((length != "+" && length != "-" && length != "/" && length != "*")) {
+        setMystate(Mystate+ "+");
+      }
+    }
+    if (key.keyCode == "45") {
+      if ((length != "+" && length != "-" && length != "/" && length != "*")) {
+        setMystate(Mystate+ "-");
+      }
+    }
+    if (key.keyCode == "42") {
+      if ((length != "+" && length != "-" && length != "/" && length != "*")) {
+        setMystate(Mystate+ "*");
+      }
+    }
+    if (key.keyCode == "47") {
+      if ((length != "+" && length != "-" && length != "/" && length != "*")) {
+        setMystate(Mystate+ "/");
+      }
+    }
+    if (key.keyCode == "13") {
+      Result();
+    }
+    if (key.keyCode == "08") {
+      Clear();
+    }
+  });
   return (
     <div className="container">
       <div className="row text-right row1">
